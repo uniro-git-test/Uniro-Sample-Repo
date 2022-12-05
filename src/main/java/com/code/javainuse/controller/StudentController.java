@@ -18,8 +18,14 @@ public class StudentController {
 	@Autowired
 	StudentServcie studentService;
 
-	@GetMapping("/retrieve")
+	@GetMapping("/retrieves")
 	public List<Student> retrieve() {
+		List<Student> studentList = studentService.retrieve();
+		return studentList;
+	}
+
+	@GetMapping("/newinsert")
+	public List<Student> newinsert() {
 		List<Student> studentList = studentService.retrieve();
 		return studentList;
 	}
