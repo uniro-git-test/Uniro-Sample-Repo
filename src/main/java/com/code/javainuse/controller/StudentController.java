@@ -24,6 +24,12 @@ public class StudentController {
 		return studentList;
 	}
 
+	@GetMapping("/newinsert")
+	public List<Student> newinsert() {
+		List<Student> studentList = studentService.retrieve();
+		return studentList;
+	}
+
 	@PostMapping("/insert")
 	public String insert(@RequestBody Student student) {
 		if (student == null) {
